@@ -6,7 +6,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json()); //allows you to send data from front-end to back-end
 
-const server = app.listen("https://s4hchat-app.herokuapp.com/" || "3001", () => {
+const server = app.listen(process.env.PORT || "3001", () => {
   console.log("Server Running on Port 3001...");
 });
 
